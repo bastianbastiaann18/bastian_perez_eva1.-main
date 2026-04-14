@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ricopan — Panadería Artesanal</title>
+  <meta name="description" content="Panadería artesanal: panes, bollería y café. Hecho cada día con ingredientes naturales." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <a class="brand" href="#inicio">
+        <div class="logo">RC</div>
+        <div>
+          <div class="brand-name">Ricopan</div>
+          <small class="brand-subtitle">Panadería artesanal</small>
+        </div>
+      </a>
+      <nav class="nav-menu">
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar a modo oscuro">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+      <button class="hamburgerr" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <h1 class="hero-title">Panes y bollería frescos cada </h1>
+          <p class="hero-description">Ingredientes locales, procesos tradicionales y recetas pasadas de generación en generación. Ven a probar lo hecho con cariño.</p>
+          <a class="btn btn-primary" href="#productos">Ver productos</a>
+
+          <div class="features-list" aria-hidden="true">
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Horno diario
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Ingredientes naturales
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Pedidos y catering
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="Images/panaderia_portada.jpg" alt="Vista de panadería y bollería" width="1200" height="800" loading="eager">
+        </div>
+      </section>
+
+      <section id="productos" class="products-section">
+        <div class="section-header">
+          <h2 class="section-title">Productos Destacados</h2>
+          <p class="section-subtitle">Recetas tradicionales horneadas diariamente</p>
+        </div>
+
+        <div class="filters-container">
+          <div class="filter-group">
+            <label for="filterType" class="filter-label">Filtrar por tipo:</label>
+            <select id="filterType" class="filter-select" aria-label="Filtrar tipos de pan">
+              <option value="all">Todos los productos</option>
+              <option value="baguette">Baguettes</option>
+              <option value="croissant">Croissants</option>
+              <option value="integral">Pan Integral</option>
+              <option value="dulces">Dulces y Repostería</option>
+            </select>
+          </div>
+          <button id="resetFilters" class="btn btn-secondary" type="button">Limpiar filtros</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid" role="list">
+          <!-- Productos se cargarán aquí con JavaScript -->
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-container">
+          <div class="about-content">
+            <h2 class="section-title">Sobre Ricopan</h2>
+            <p class="section-lead">Desde 1998, Ricopan hornea con masa madre y recetas tradicionales. Nuestro compromiso: sabor auténtico y atención cercana.</p>
+            
+            <div class="about-features">
+              <div class="about-feature">
+                <h3>Productos Locales</h3>
+                <p>Utilizamos ingredientes de proveedores locales y de temporada para garantizar la máxima calidad.</p>
+              </div>
+              <div class="about-feature">
+                <h3>Opciones Especiales</h3>
+                <p>Ofrecemos alternativas veganas, sin gluten y productos para alérgicos. Tu salud nos importa.</p>
+              </div>
+              <div class="about-feature">
+                <h3>Catering y Eventos</h3>
+                <p>Pedidos personalizados para eventos especiales, pan por volumen y arreglos corporativos.</p>
+              </div>
+            </div>
+
+            <div class="about-info-box">
+              <strong class="info-title">Horario de Atención</strong>
+              <div class="info-text">
+                <div>Lunes a Sábado: 06:30 – 20:00</div>
+                <div>Domingo: 07:30 – 14:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-section" id="contacto">
+            <h3 class="form-title">Haz tu Pedido</h3>
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre*</label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="contacto" class="form-label">Teléfono o Email*</label>
+                <input type="text" id="contacto" name="contacto" class="form-input" placeholder="Tu teléfono o email" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="mensaje" class="form-label">Tu Pedido / Mensaje*</label>
+                <textarea id="mensaje" name="mensaje" class="form-textarea" rows="5" placeholder="Cuéntanos qué deseas encargar..." required></textarea>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+                <button type="button" id="locateBtn" class="btn btn-secondary">Cómo llegar</button>
+              </div>
+              
+              <div id="formMsg" class="form-message" aria-live="polite"></div>
+            </form>
+
+            <div class="contact-info">
+              <strong class="info-title">Contacto Directo</strong>
+              <div class="info-text">
+                <div>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></div>
+                <div>Email: <a href="mailto:info@laespiga.example">info@laespiga.example</a></div>
+              </div>
+            </div>
+
+            <div class="map-container">
+              <iframe 
+                title="Ubicación de Ricopan en el mapa" 
+                src="https://www.google.com/maps?q=-33.4489,-70.6693&z=15&output=embed" 
+                width="100%" 
+                height="200" 
+                style="border:0;border-radius:8px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Ricopan Panadería Artesanal. Todos los derechos reservados.</p>
+        <p class="footer-credits">Diseño moderno y elegante para tu panadería de confianza.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="Js/main.js"></script>
+</body>
+</html>
+      <div style="font-size:13px;color:var(--muted);margin-top:8px">(Las imágenes descargadas desde fuentes CC0 aparecerán aquí con su atribución cuando ejecutes el script.)</div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Ricopan · Dirección: Calle Falsa 123 · Hecho con masa madre
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function submitForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const nombre = f.nombre.value.trim();
+      const contacto = f.contacto.value.trim();
+      const mensaje = f.mensaje.value.trim();
+      const msg = document.getElementById('formMsg');
+
+      if(!nombre||!contacto||!mensaje){
+        msg.textContent = 'Por favor completa todos los campos.';
+        return false;
+      }
+      // Simulación: en una app real enviarías a tu API.
+      msg.style.color = 'green';
+      msg.textContent = 'Pedido recibido. Te contactamos pronto,';
+      f.reset();
+      return false;
+    }
+
+    function locate(){
+      // abre Google Maps con la ubicación aproximada
+        window.open('https://www.google.com/maps/place/Ricopan+Panaderia', '_blank');
+    }
+    // Filtrado simple por tipo de 
+    (function(){
+      const select = document.getElementById('filterType');
+      const showAll = document.getElementById('showAll');
+      function filterProducts(type){
+        const cards = document.querySelectorAll('.grid .card');
+        cards.forEach(c=>{
+          const t = c.dataset.type || 'all';
+          c.style.display = (type === 'all' || t === type) ? 'flex' : 'none';
+        });
+      }
+      if(select){
+        select.addEventListener('change', e=>filterProducts(e.target.value));
+      }
+      if(showAll){
+        showAll.addEventListener('click', ()=>{ select.value = 'all'; filterProducts('all'); });
+      }
+    })();
+
+    // Cargar créditos de imágenes (generado por scripts/download_images.py)
+    (function(){
+      const creditsList = document.getElementById('creditsList');
+      fetch('Images/images_credits.json')
+        .then(r=>{ if(!r.ok) throw new Error('no credits'); return r.json() })
+        .then(list=>{
+          if(!list || !list.length) return;
+          list.forEach(i=>{
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = i.source || '#';
+            a.textContent = i.author || i.source || i.file;
+            a.target = '_blank';
+            li.appendChild(document.createTextNode(i.file + ' — '));
+            li.appendChild(a);
+            li.appendChild(document.createTextNode(' (' + (i.license||'') + ')'));
+            creditsList.appendChild(li);
+          })
+        })
+        .catch(()=>{
+          // no credits file yet; ignore
+        })
+    })();
+  </script>
+</body>
+</html>
